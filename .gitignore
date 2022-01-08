@@ -1,0 +1,3 @@
+*.py[cpx]
+__pycache__/
+
