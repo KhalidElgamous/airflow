@@ -20,12 +20,8 @@ with DAG(
     tags=['scraping'],
 ) as dag:
     t1 = PostgresOperator(
-        task_id="select table",
+        task_id="select_table",
         postgres_conn_id="postgres_db",
-        sql="""
-            SELECT * 
-            FROM "public"."product" 
-            LIMIT %(limit)d;
-          """,
+        sql='SELECT * FROM "public"."product" LIMIT %(limit)d;',
         parameters={"limit": 1},
     )
