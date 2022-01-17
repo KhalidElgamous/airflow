@@ -1,1 +1,1 @@
-web: airflow db reset
+web: airflow db reset -y
