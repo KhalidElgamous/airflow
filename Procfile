@@ -1,1 +1,1 @@
-web: airflow db reset -y
+web: airflow webserver --port $PORT --daemon & airflow scheduler
